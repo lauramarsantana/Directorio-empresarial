@@ -1,0 +1,73 @@
+*,::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 62.5%;
+}
+body{
+    background-color: rgba(0,0 , 0, .8);
+    color: rgba(200, 200, 200, .9);
+}
+.Formulario{
+    height: 100vh;
+    width: 70vh;
+    margin: 2rem auto;
+}
+#titulo{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.3rem;
+}
+.formularioDatos{
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.formularioDatos input{
+    margin: 1rem 0rem;
+    line-height: 3rem;
+    background: none;
+    outline: 0;
+    border: 0;
+    color: white;
+}
+.formularioDatos input:active{
+    border-bottom: 1px solid dodgerblue;
+}
+.formularioDatos input:focus{
+    border-bottom: 1px solid dodgerblue;
+}
+.formularioDatos button{
+    margin: 1rem 0rem;
+    background-color: dodgerblue;
+    border: 0;
+    outline: 0;
+    height: 3rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+}
+.formularioDatos button:hover{
+    background-color: blueviolet;
+}
+.listadoTareas{
+    display: flex;
+    flex-direction: column;
+}
+.tarea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 3rem;
+}
+.icono{
+    color: tomato;
+    cursor: pointer;
+}

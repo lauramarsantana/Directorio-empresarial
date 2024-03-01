@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--usar fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--usar iconos-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!--estilos-->
+    <link rel="stylesheet" href="style.css">
+    <title>Directorio empresarial</title>
+</head>
+<body>
+    <div class="Formulario">
+        <!--head-->
+        <h1 id="titulo"> AGENDA DE CONTACTOS</h1>
+        <!--Formulario para ingresar datos -->
+        <div class="formularioDatos">
+            <input type="text" id="usuario" placeholder="Cliente/Proveedor">
+            <input type="text" id="tipousuario" placeholder="mayorista/detal/micro/macro">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+            <input type="text" id="correo" placeholder="Correo">
+            <input type="text" id="celular" placeholder="Celular">
+            <button id="botonagregar" onclick="agregarContacto()"> Agregar usuario</button>
+            <a href="javascript:generarPDF()"> Generar pdf</a>
+        </div>
+        <!-- Listado de clientes-->
+        <div class="listadoTareas">
+            <div class="tarea">
+                <h3>Nombre</h3>
+                <h3>Apellido</h3>
+                <p>Correo</p>
+                <p>Celular</p>
+                <p>usuario</p>
+                <p>tipo usuario</p>
+                <span class="material-symbols-outlined icono">
+                    delete
+                </span>
+            </div>
+            <div class="tarea">
+                <h3>Nombre</h3>
+                <h3>Apellido</h3>
+                <p>Correo</p>
+                <p>Celular</p>
+                <p>usuario</p>
+                <p>tipo usuario</p>
+                <span class="material-symbols-outlined icono">
+                    delete
+                </span>
+            </div> 
+        </div>
+        <script src="funciones.js"></script>
+       <script src="main.js"></script>
+       <script src="docPdf.js"></script>
+</body>
+</html>
