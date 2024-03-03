@@ -53,6 +53,7 @@ body{
     border-radius: 5px;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
 }
 .formularioDatos button:hover{
     background-color: blueviolet;
@@ -66,8 +67,28 @@ body{
     flex-direction: row;
     justify-content: space-between;
     height: 3rem;
+    text-align: center;
 }
 .icono{
     color: tomato;
     cursor: pointer;
 }
+  
+.boton-enlace{
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.boton-enlace:hover {
+    background-color: blueviolet;
+}
+.contenedor-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  

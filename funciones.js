@@ -1,8 +1,23 @@
 function guardarContacto(db, contacto) {
     // cada vez que se hace clicK, se agrega un objeto
     db.setItem(contacto.id, JSON.stringify(contacto)); // permite guardar el objeto y JSON lo deja leer
-    //window.location.href = 'agenda.html'; //REFRESCA PAGINA  
+
+    // Limpiar los campos de entrada
+    //limpiarInputs();
+    window.location.reload();
 }
+
+
+
+/*function limpiarInputs() {
+    // Obtener los elementos de input y establecer su valor en vacío
+    document.getElementById('nombre').value = '';
+    document.getElementById('apellido').value = '';
+    document.getElementById('usuario').value = '';
+    document.getElementById('tipousuario').value = '';
+    document.getElementById('correo').value = '';
+    document.getElementById('celular').value = '';
+}*/
 
 function leerContacto(db,parentnode){
     let keys = Object.keys(db);
@@ -20,7 +35,7 @@ function crearContacto(parentnode,contacto,db){
     let correocontacto = document.createElement('p');
     let celularcontacto = document.createElement('p');
     let usuariocontacto = document.createElement('p');
-    let tipousuario = document.createElement('p');
+    let tipousuariocontacto = document.createElement('p');
     let iconoborrar = document.createElement('span');
 
     nombrecontacto.innerHTML = contacto.nombre;
@@ -31,15 +46,24 @@ function crearContacto(parentnode,contacto,db){
     tipousuariocontacto.innerHTML = contacto.tipousuario;
     iconoborrar.innerHTML = 'delete_forever';
 
-    divcontacto.classList.add('listadoTareas');
+    divcontacto.classList.add('tarea');
     iconoborrar.classList.add('material-symbols-outlined','icono');
+
+    iconoborrar.onclick = () => {
+        db.removeItem(contacto.id);
+        console.log("Contacto eliminado:", contacto.id)
+        window.location.reload();
+    };
+    
 
     divcontacto.appendChild(nombrecontacto);
     divcontacto.appendChild(apellidocontacto);
     divcontacto.appendChild(correocontacto);
-    divcontacto.appendChild(celularContacto);
+    divcontacto.appendChild(celularcontacto);
     divcontacto.appendChild(usuariocontacto);
-    divcontacto.appendChild(tipousuario);
+    divcontacto.appendChild(tipousuariocontacto);
+    divcontacto.appendChild(iconoborrar);
 
+    //nodo padre
     parentnode.appendChild(divcontacto);
 }
